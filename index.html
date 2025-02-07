@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Automation Presentation</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6); /* Gradient background */
+            color: #fff;
+            overflow: hidden; /* Hide scrollbars */
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .slide {
+            width: 80%; /* Adjust as needed */
+            max-width: 1000px; /* Maximum width of the slide */
+            height: 80vh; /* Adjust as needed */
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none; /* Initially hide all slides */
+            overflow-y: auto; /* Enable scrolling within the slide */
+            position: relative; /* For absolute positioning of navigation buttons */
+        }
+
+        .slide:first-child {
+            display: block; /* Show the first slide initially */
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            color: #f0f0f0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 0.5em;
+            color: #f0f0f0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+            line-height: 1.5;
+        }
+
+        strong {
+            color: #f9d71c; /* Highlight key points */
+        }
+
+        a {
+            color: #29abe2;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #1f7bb9;
+            text-decoration: underline;
+        }
+/* Navigation Buttons */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    opacity: 0.5; /* Semi-transparent by default */
+    z-index: 10; /* Ensure buttons are above the slide content */
+}
+
+.nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    opacity: 1; /* Fully opaque on hover */
+}
+
+.prev {
+    left: 10px; /* Position on the left edge */
+}
+
+.next {
+    right: 10px; /* Position on the right edge */
+}
+        /* Bullet Points */
+        .slide ul li::before {
+            content: '• ';  /* Unicode bullet character */
+            color: #f9d71c; /*  bullet color */
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .slide ul {
+            padding-left: 2em; /* Adjust as needed to align text after the bullet */
+        }
+
+        /* Code Snippet Style (Optional - if you add code snippets) */
+        pre {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #f0f0f0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="slide">
+        <h1>Code Automation Presentation</h1>
+        <h2>Streamlining Development with VS Code</h2>
+    </div>
+
+    <div class="slide">
+        <h1>Agenda</h1>
+        <ul>
+            <li>Introduction</li>
+            <li>VS Code Setup Requirements</li>
+            <li>VS Code Setup (Practical)</li>
+            <li>Extension Understanding</li>
+            <li>Current Challenges (Practical)</li>
+            <li>Next Plan</li>
+            <li>Q&A</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Introduction</h1>
+        <ul>
+            <li><strong>Importance of Code Automation:</strong>
+                <ul>
+                    <li>Increases efficiency</li>
+                    <li>Reduces errors</li>
+                    <li>Enhances productivity</li>
+                </ul>
+            </li>
+            <li><strong>Benefits of Using VS Code:</strong>
+                <ul>
+                    <li>Extensive extensions</li>
+                    <li>Customizable environment</li>
+                    <li>Strong community support</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>VS Code Setup Requirements</h1>
+        <ul>
+            <li><strong>VS Code Extensions:</strong>
+                <ul>
+                    <li>Continue.dev</li>
+                    <li>Cline</li>
+                </ul>
+            </li>
+            <li><strong>API Keys:</strong>
+                <ul>
+                    <li>Google AI Studio</li>
+                    <li>Groq</li>
+                    <li>Mistral</li>
+                    <li>Open Router</li>
+                    <li>GitHub Co-pilot</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>VS Code Extensions</h1>
+        <ul>
+            <li><strong>Continue.dev:</strong>
+                <ul>
+                    <li>Terminal</li>
+                    <li>Custom Slash</li>
+                    <li>Reference and Indexing</li>
+                </ul>
+            </li>
+            <li><strong>Cline:</strong>
+                <ul>
+                    <li>Terminal</li>
+                    <li>Reference and Indexing</li>
+                    <li>Act/Code Mode</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>VS Code Setup (Practical)</h1>
+        <ul>
+            <li><strong>Live Demo:</strong>
+                <ul>
+                    <li>Installing VS Code</li>
+                    <li>Installing necessary extensions</li>
+                    <li>Configuring API keys</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Extension Understanding</h1>
+        <ul>
+            <li><strong>Continue.dev:</strong>
+                <ul>
+                    <li>Detailed explanation of features</li>
+                    <li>Practical examples</li>
+                </ul>
+            </li>
+            <li><strong>Cline:</strong>
+                <ul>
+                    <li>Detailed explanation of features</li>
+                    <li>Practical examples</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Current Challenges (Practical)</h1>
+        <ul>
+            <li><strong>Live Demo:</strong>
+                <ul>
+                    <li>Demonstrating current challenges in code automation</li>
+                    <li>Discussing potential solutions</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Next Plan</h1>
+        <ul>
+            <li><strong>Create CRUD Operation:</strong>
+                <ul>
+                    <li>Explanation of CRUD operations</li>
+                    <li>Implementation plan</li>
+                </ul>
+            </li>
+            <li><strong>Impact Analysis of Current Code:</strong>
+                <ul>
+                    <li>Methods for analyzing code impact</li>
+                    <li>Tools and techniques</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Q&A</h1>
+        <ul>
+            <li><strong>Open Floor for Questions:</strong>
+                <ul>
+                    <li>Encourage audience participation</li>
+                    <li>Provide contact information for follow-up questions</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Additional Resources</h1>
+        <ul>
+            <li><strong>VS Code Documentation:</strong> <a href="https://code.visualstudio.com/docs" target="_blank">VS Code Documentation</a></li>
+            <li><strong>Continue.dev:</strong> <a href="https://continue.dev" target="_blank">Continue.dev</a></li>
+            <li><strong>Cline:</strong> <a href="https://cline.dev" target="_blank">Cline</a></li>
+            <li><strong>API Keys:</strong>
+                <ul>
+                    <li><strong>Google AI Studio:</strong> <a href="https://ai.google.com" target="_blank">Google AI Studio</a></li>
+                    <li><strong>Groq:</strong> <a href="https://groq.com" target="_blank">Groq</a></li>
+                    <li><strong>Mistral:</strong> <a href="https://mistral.ai" target="_blank">Mistral</a></li>
+                    <li><strong>Open Router:</strong> <a href="https://openrouter.ai" target="_blank">Open Router</a></li>
+                    <li><strong>GitHub Co-pilot:</strong> <a href="https://github.com/features/copilot" target="_blank">GitHub Co-pilot</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+     <button class="nav-button prev">Previous</button>
+    <button class="nav-button next">Next</button>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    let currentSlide = 0;
+    const slides = $('.slide');
+    const numSlides = slides.length;
+
+    function showSlide(index) {
+        slides.hide();
+        $(slides[index]).fadeIn(500);
+        currentSlide = index;
+
+        $('.prev').prop('disabled', currentSlide === 0);
+        $('.next').prop('disabled', currentSlide === numSlides - 1);
+    }
+
+    $('.next').click(function() {
+        if (currentSlide < numSlides - 1) {
+            showSlide(currentSlide + 1);
+        }
+    });
+
+    $('.prev').click(function() {
+        if (currentSlide > 0) {
+            showSlide(currentSlide - 1);
+        }
+    });
+
+    showSlide(0);
+});
+</script>
+
+</body>
+</html>

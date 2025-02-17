@@ -123,7 +123,7 @@ class MyComponent extends HTMLElement {
                 rightTextarea.html("Loading...");
 
                 var settings = {
-                    "url": "https://ec2-52-66-248-193.ap-south-1.compute.amazonaws.com:7790/generate",
+                    "url": "http://ec2-52-66-248-193.ap-south-1.compute.amazonaws.com:7790/generate",
                     "method": "POST",
                     "timeout": 0,
                     "headers": {
@@ -141,7 +141,7 @@ class MyComponent extends HTMLElement {
                     .done(function (response) {
                         // Use showdown.js to convert markdown to HTML and set it to the right textarea
                         const showdownScript = document.createElement('script');
-                        showdownScript.src = 'http://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js';
+                        showdownScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js';
                         showdownScript.onload = () => {
                             var converter = new showdown.Converter();
                             var html = converter.makeHtml(response);

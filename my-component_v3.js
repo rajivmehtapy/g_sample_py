@@ -141,7 +141,7 @@ class MyComponent extends HTMLElement {
                     .done(function (response) {
                         // Use showdown.js to convert markdown to HTML and set it to the right textarea
                         const showdownScript = document.createElement('script');
-                        showdownScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js';
+                        showdownScript.src = 'http://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js';
                         showdownScript.onload = () => {
                             var converter = new showdown.Converter();
                             var html = converter.makeHtml(response);

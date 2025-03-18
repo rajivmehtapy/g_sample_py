@@ -123,7 +123,7 @@ class MyComponent extends HTMLElement {
                 rightTextarea.html("Loading...");
 
                 var settings = {
-                    "url": "http://ec2-52-66-248-193.ap-south-1.compute.amazonaws.com:7790/generate",
+                    "url": "https://2448-52-66-248-193.ngrok-free.app/generate",
                     "method": "POST",
                     "timeout": 0,
                     "headers": {
